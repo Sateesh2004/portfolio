@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a href="" class="logo">sateesh</a>
+        <div class="navs">
+            <a href="javascript:void(0)" class="close"><i class="fa-solid fa-close"></i></a>
+            <a href="" >Home</a>
+            <a href="/features/" >Features</a>
+            <a href="/resume/" >Resume</a>
+            {% comment %} <a href="/blog" >Blog</a> {% endcomment %}
+            <a href="/contact/" >Contact</a>
+            <a href="">Hire Me</a>
+        </div>
+        <a href="javascript:void(0)" class="bars"><i class="fa-solid fa-bars"></i></a>
+    </nav>
+    <section>
+        <div id="home">
+            <div class="home-left">
+                   <p class="start">Welcome to my world</p>
+                   <p class="hi-line home-start-p">Hi, I'm a <span class="highlight">Full Stack</span></p>
+                   <p class="skill home-start-p">Web Developer.</p>
+                   <p class="whole-intro home-start-p">A full stack web developer with a strong foundation in HTML, CSS, and JavaScript. I've also honed my skills in Django and have a solid understanding of Next.</p>
+                   <div class="social-icon-container">
+                        <div>
+                            <p>Find With Me</p> 
+                            <a href="https://www.instagram.com/sateesh__._/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/sateesh-kumar-b4a206231/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                            <a href="https://github.com/Sateesh2004" target="_blank"><i class="fa-solid fa-code-compare"></i></a>
+                        </div>
+                        <div>
+                            <p>Best Skill On</p>
+                            <a href="" class="nohover"><img src="{% static 'images/icons-01.png' %}" alt="" height="21px"></a>
+                            <a href="" class="nohover"><img src="{% static 'images/icons-02.png' %}" alt="" height="21px"></a>
+                            <a href="" class="nohover"><img src="{% static 'images/icons-03.png' %}" alt="" height="21px"></a>
+                        </div>
+                   </div>
+            </div>
+            <div class="home-right">
+                <div class="container"><img src="{% static 'images/Saly-13.png' %}" alt="" ></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let bar=document.getElementsByClassName("bars")
+        let navs=document.getElementsByClassName("navs")
+        let close=document.getElementsByClassName("close")
+        bar[0].addEventListener("click",comming)
+        close[0].addEventListener("click",going)
+        function comming(){
+            navs[0].style.right="80px";
+           
+           
+        }
+        function going(){
+            navs[0].style.right="-120px";  
+              
+            
+        }
+
+    </script>
+    
+</body>
+</html>

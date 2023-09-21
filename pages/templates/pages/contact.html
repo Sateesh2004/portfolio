@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="{% static 'pages/css/contact.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="" class="logo">sateesh</a>
+      <div class="navs">
+        <a href="javascript:void(0)" class="close"><i class="fa-solid fa-close"></i></a>
+        <a href="/" >Home</a>
+        <a href="/features/" >Features</a>
+        <a href="/resume/" >Resume</a>
+        {% comment %} <a href="/blog/">Blog</a> {% endcomment %}
+        <a href="" >Contact</a>
+        <a href="">Hire Me</a>
+      </div>
+      <a href="javascript:void(0)" class="bars"><i class="fa-solid fa-bars"></i></a>
+  </nav>
+    <section>
+      <div class="contact-section">
+           <p class="contact-with-us">CONTACT WITH US</p>
+           <p class="contact">Contact</p>
+           <div class="hand-shake-and-form-container">
+                  <div class="hand-shake">
+                    <img src="{% static 'pages/images/Saly-31.png' %}" alt="">
+                    <p class="name content">Sateesh Kumar</p>
+                    <p class="position content">Web Developer</p>
+                    <p class="freelancer content">I am available for freelance work. Connect with me via and call in to my account.</p>
+                    <p class="phone content">Phone: +9140524532
+                      </p>
+                    <p class="number">
+                    Email: stskmr37@gmail.com
+                    </p>
+                    <div class="social-container">
+                       <p>Find With Me</p> 
+                       <a href=""><i class="fa-brands fa-instagram"></i></a>
+                       <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                       <a href=""><i class="fa-solid fa-code-compare"></i></a>
+                   </div>
+                  </div>
+                  <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="clns" id="cln1">
+                      <div class="name">
+                        
+                        <br>
+                        <br>
+                      
+                        <label for="{{ form.name.id_for_label }}">NAME</label>
+                  
+                        <br>
+                        <br>
+                        {{ form.name }}
+                      </div>
+                      <div class="number">
+                        <br>
+                        <br>
+                        
+                        <label for="{{ form.number.id_for_label }}">YOUR NUMBER</label>
+                      
+                        <br>
+                        <br>
+
+                        {{form.number}}
+                      </div>
+                    </div>
+                    <div class="clns" id="cln2">
+                      <br>
+                      
+                      <br>
+                      <label for="{{ form.email.id_for_label }}">EMAIL</label>
+                    
+                      <br>
+                      <br>
+                      {{form.email}}
+                    </div>
+                    <div class="clns" id="cln3">
+                      
+                      <br>
+                      <br>
+                      <label for="{{ form.subject.id_for_label }}">SUBJECT</label>
+                      <br>
+                      
+                      <br>
+                      {{form.subject}}
+                    </div>
+                    <div class="clns" id="cln4">
+                      
+                      <br>
+                      <br>
+                      <label for="{{ form.emessage.id_for_label }}">YOUR MESSAGE</label>
+                      <br>
+                      <br>
+                      
+                      {{form.message}}
+                      <br>
+                      <br>
+                    </div>
+                    <div class="clns" id="cln5">
+                      <br>
+                      <br>
+                      
+                      <input type="submit" name="" id="" value="SUBMIT">
+
+                    </div>
+                  </form>
+           </div>
+          <hr>
+        
+        
+      </div> 
+     
+      
+     
+    </section>
+    <script>
+      let bar=document.getElementsByClassName("bars")
+      let navs=document.getElementsByClassName("navs")
+      let close=document.getElementsByClassName("close")
+      bar[0].addEventListener("click",comming)
+      close[0].addEventListener("click",going)
+      function comming(){
+          navs[0].style.right="80px";
+         
+         
+      }
+      function going(){
+          navs[0].style.right="-120px";  
+            
+          
+      }
+
+  </script>
+  </body>
+</html>
